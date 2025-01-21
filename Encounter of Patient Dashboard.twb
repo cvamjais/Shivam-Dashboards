@@ -1,0 +1,2199 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='EncounterofPatientDashboard' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='DW Tableau Intro Tutorial' inline='true' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DW Tableau Intro Tutorial' name='textscan.139pyt40p1hshe1c7g3tp0ottboq'>
+            <connection class='textscan' directory='C:/Users/Shivam/Downloads' filename='DW Tableau Intro Tutorial.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.139pyt40p1hshe1c7g3tp0ottboq' name='DW Tableau Intro Tutorial.csv' table='[DW Tableau Intro Tutorial#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='encounter_id' ordinal='0' />
+            <column datatype='datetime' name='start' ordinal='1' />
+            <column datatype='datetime' name='stop' ordinal='2' />
+            <column datatype='string' name='encounterclass' ordinal='3' />
+            <column datatype='string' name='enc_type' ordinal='4' />
+            <column datatype='real' name='base_encounter_cost' ordinal='5' />
+            <column datatype='real' name='total_claim_cost' ordinal='6' />
+            <column datatype='string' name='organization' ordinal='7' />
+            <column datatype='string' name='enc_reason' ordinal='8' />
+            <column datatype='string' name='payer' ordinal='9' />
+            <column datatype='string' name='payer_category' ordinal='10' />
+            <column datatype='string' name='patient_id' ordinal='11' />
+            <column datatype='string' name='first' ordinal='12' />
+            <column datatype='string' name='last' ordinal='13' />
+            <column datatype='date' name='birthdate' ordinal='14' />
+            <column datatype='string' name='ethnicity' ordinal='15' />
+            <column datatype='string' name='race' ordinal='16' />
+            <column datatype='integer' name='zip' ordinal='17' />
+            <column datatype='integer' name='flu_2022' ordinal='18' />
+            <column datatype='integer' name='covid' ordinal='19' />
+            <column datatype='string' name='org_name' ordinal='20' />
+            <column datatype='integer' name='org_zip' ordinal='21' />
+            <column datatype='string' name='org_city' ordinal='22' />
+            <column datatype='string' name='org_state' ordinal='23' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>encounter_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[encounter_id]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>encounter_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[start]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>start</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stop</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stop]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>stop</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>encounterclass</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[encounterclass]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>encounterclass</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>enc_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[enc_type]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>enc_type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>base_encounter_cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[base_encounter_cost]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>base_encounter_cost</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_claim_cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_claim_cost]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>total_claim_cost</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>organization</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[organization]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>organization</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>enc_reason</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[enc_reason]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>enc_reason</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payer</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payer]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>payer</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payer_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payer_category]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>payer_category</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_id]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>patient_id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[first]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>first</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[last]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>last</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birthdate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[birthdate]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>birthdate</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ethnicity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ethnicity]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>ethnicity</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>race</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[race]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>race</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zip]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>zip</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flu_2022</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flu_2022]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>flu_2022</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>covid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[covid]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>covid</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>org_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[org_name]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>org_name</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>org_zip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[org_zip]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>org_zip</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>org_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[org_city]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>org_city</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>org_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[org_state]</local-name>
+            <parent-name>[DW Tableau Intro Tutorial.csv]</parent-name>
+            <remote-alias>org_state</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[LOS (copy)_1005147161353756676]' peg='0' size='5' />
+      </column>
+      <column caption='Row Count ' datatype='integer' name='[Calculation_1005147161300398081]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='LOS' datatype='integer' name='[Calculation_1005147161343315970]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;,[start],[stop])' />
+      </column>
+      <column caption='ER Median Time' datatype='integer' name='[LOS (copy)_1005147161346625539]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;minute&apos;,[start],[stop])' />
+      </column>
+      <column caption='Age' datatype='integer' name='[LOS (copy)_1005147161353756676]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;year&apos;,[birthdate],#12-31-2022#)' />
+      </column>
+      <column caption='DW Tableau Intro Tutorial.csv' datatype='table' name='[__tableau_internal_object_id__].[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]' role='measure' type='quantitative' />
+      <column caption='Base Encounter Cost' datatype='real' name='[base_encounter_cost]' role='measure' type='quantitative' />
+      <column caption='Birthdate' datatype='date' name='[birthdate]' role='dimension' type='ordinal' />
+      <column caption='Covid' datatype='integer' name='[covid]' role='measure' type='quantitative' />
+      <column caption='Enc Reason' datatype='string' name='[enc_reason]' role='dimension' type='nominal' />
+      <column caption='Enc Type' datatype='string' name='[enc_type]' role='dimension' type='nominal' />
+      <column caption='Encounter Id' datatype='string' name='[encounter_id]' role='dimension' type='nominal' />
+      <column caption='Encounterclass' datatype='string' name='[encounterclass]' role='dimension' type='nominal' />
+      <column caption='Ethnicity' datatype='string' name='[ethnicity]' role='dimension' type='nominal' />
+      <column caption='First' datatype='string' name='[first]' role='dimension' type='nominal' />
+      <column caption='Flu 2022' datatype='integer' name='[flu_2022]' role='measure' type='quantitative' />
+      <column caption='Last' datatype='string' name='[last]' role='dimension' type='nominal' />
+      <column caption='Org City' datatype='string' name='[org_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Org Name' datatype='string' name='[org_name]' role='dimension' type='nominal' />
+      <column caption='Org State' datatype='string' name='[org_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='Org Zip' datatype='integer' default-format='*00000' name='[org_zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Organization' datatype='string' name='[organization]' role='dimension' type='nominal' />
+      <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+      <column caption='Payer' datatype='string' name='[payer]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;NO_INSURANCE&quot;' value='No Insurance' />
+        </aliases>
+      </column>
+      <column caption='Payer Category' datatype='string' name='[payer_category]' role='dimension' type='nominal' />
+      <column caption='Race' datatype='string' name='[race]' role='dimension' type='nominal' />
+      <column caption='Start' datatype='datetime' name='[start]' role='dimension' type='ordinal' />
+      <column caption='Stop' datatype='datetime' name='[stop]' role='dimension' type='ordinal' />
+      <column caption='Total Claim Cost' datatype='real' name='[total_claim_cost]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Shivam/AppData/Local/Temp/TableauTemp/#TableauTemp_15bp9820iravr4167uzp31jkoudj.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/28/2024 02:42:24 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>encounter_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[encounter_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>encounter_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21669</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[start]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start</remote-alias>
+              <ordinal>1</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>21669</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>stop</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[stop]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stop</remote-alias>
+              <ordinal>2</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>21669</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>encounterclass</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[encounterclass]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>encounterclass</remote-alias>
+              <ordinal>3</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>enc_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[enc_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>enc_type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>base_encounter_cost</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[base_encounter_cost]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>base_encounter_cost</remote-alias>
+              <ordinal>5</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_claim_cost</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_claim_cost]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_claim_cost</remote-alias>
+              <ordinal>6</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10084</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>organization</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[organization]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>organization</remote-alias>
+              <ordinal>7</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>348</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>enc_reason</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[enc_reason]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>enc_reason</remote-alias>
+              <ordinal>8</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>70</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payer</remote-alias>
+              <ordinal>9</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payer_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payer_category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payer_category</remote-alias>
+              <ordinal>10</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_id</remote-alias>
+              <ordinal>11</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2010</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[first]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>first</remote-alias>
+              <ordinal>12</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1720</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[last]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>last</remote-alias>
+              <ordinal>13</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>915</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birthdate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[birthdate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>birthdate</remote-alias>
+              <ordinal>14</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1982</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ethnicity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ethnicity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ethnicity</remote-alias>
+              <ordinal>15</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>race</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[race]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>race</remote-alias>
+              <ordinal>16</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[zip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>zip</remote-alias>
+              <ordinal>17</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>427</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flu_2022</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flu_2022]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flu_2022</remote-alias>
+              <ordinal>18</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>covid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[covid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>covid</remote-alias>
+              <ordinal>19</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>org_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[org_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>org_name</remote-alias>
+              <ordinal>20</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>313</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>org_zip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[org_zip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>org_zip</remote-alias>
+              <ordinal>21</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>309</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>org_city</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[org_city]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>org_city</remote-alias>
+              <ordinal>22</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>172</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>org_state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[org_state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>org_state</remote-alias>
+              <ordinal>23</ordinal>
+              <family>DW Tableau Intro Tutorial.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='DW Tableau Intro Tutorial.csv' id='DW Tableau Intro Tutorial.csv_37DAEE7CBAB147C08ACF9384E65025A0'>
+            <properties context=''>
+              <relation connection='textscan.139pyt40p1hshe1c7g3tp0ottboq' name='DW Tableau Intro Tutorial.csv' table='[DW Tableau Intro Tutorial#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='encounter_id' ordinal='0' />
+                  <column datatype='datetime' name='start' ordinal='1' />
+                  <column datatype='datetime' name='stop' ordinal='2' />
+                  <column datatype='string' name='encounterclass' ordinal='3' />
+                  <column datatype='string' name='enc_type' ordinal='4' />
+                  <column datatype='real' name='base_encounter_cost' ordinal='5' />
+                  <column datatype='real' name='total_claim_cost' ordinal='6' />
+                  <column datatype='string' name='organization' ordinal='7' />
+                  <column datatype='string' name='enc_reason' ordinal='8' />
+                  <column datatype='string' name='payer' ordinal='9' />
+                  <column datatype='string' name='payer_category' ordinal='10' />
+                  <column datatype='string' name='patient_id' ordinal='11' />
+                  <column datatype='string' name='first' ordinal='12' />
+                  <column datatype='string' name='last' ordinal='13' />
+                  <column datatype='date' name='birthdate' ordinal='14' />
+                  <column datatype='string' name='ethnicity' ordinal='15' />
+                  <column datatype='string' name='race' ordinal='16' />
+                  <column datatype='integer' name='zip' ordinal='17' />
+                  <column datatype='integer' name='flu_2022' ordinal='18' />
+                  <column datatype='integer' name='covid' ordinal='19' />
+                  <column datatype='string' name='org_name' ordinal='20' />
+                  <column datatype='integer' name='org_zip' ordinal='21' />
+                  <column datatype='string' name='org_city' ordinal='22' />
+                  <column datatype='string' name='org_state' ordinal='23' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='ER Median Time'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column caption='ER Median Time' datatype='integer' name='[LOS (copy)_1005147161346625539]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;minute&apos;,[start],[stop])' />
+            </column>
+            <column caption='Encounterclass' datatype='string' name='[encounterclass]' role='dimension' type='nominal' />
+            <column-instance column='[LOS (copy)_1005147161346625539]' derivation='Median' name='[med:LOS (copy)_1005147161346625539:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[encounterclass]' derivation='None' name='[none:encounterclass:nk]' pivot='key' type='nominal' />
+            <column caption='Start' datatype='datetime' name='[start]' role='dimension' type='ordinal' />
+            <column caption='Stop' datatype='datetime' name='[stop]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:encounterclass:nk]'>
+            <groupfilter function='member' level='[none:encounterclass:nk]' member='&quot;emergency&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:encounterclass:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[med:LOS (copy)_1005147161346625539:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='18'>ER Median Time: </run>
+                <run bold='true' fontalignment='0' fontsize='18'><![CDATA[<[federated.0rl0wxw17z804w19klqrn0uxxvdf].[med:LOS (copy)_1005147161346625539:qk]> mins]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{71FB5E3F-CA8F-4B26-8409-DE3066F4C8AE}' />
+    </worksheet>
+    <worksheet name='Encounter By Payers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Medium'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column caption='Row Count ' datatype='integer' name='[Calculation_1005147161300398081]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[payer]' derivation='None' name='[none:payer:nk]' pivot='key' type='nominal' />
+            <column caption='Payer' datatype='string' name='[payer]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;NO_INSURANCE&quot;' value='No Insurance' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1005147161300398081]' derivation='Sum' name='[sum:Calculation_1005147161300398081:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:payer:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-style' value='normal' />
+            <format attr='text-decoration' value='none' />
+            <format attr='font-weight' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:payer:nk]' value='normal' />
+            <format attr='font-style' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:payer:nk]' value='normal' />
+            <format attr='text-decoration' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:payer:nk]' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:payer:nk]' value='180' />
+            <format attr='band-color' scope='rows' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-decoration' value='none' />
+            <format attr='font-size' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:payer:nk]' value='10' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' palette='blue_10_0' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='9' />
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='tooltip'>
+            <format attr='font-style' value='normal' />
+            <format attr='text-decoration' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' />
+              <text column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:payer:nk]</rows>
+        <cols>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]</cols>
+      </table>
+      <simple-id uuid='{BBD07C0F-FFA9-4853-8B97-345B50600F84}' />
+    </worksheet>
+    <worksheet name='Encouters Over Time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Book'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column caption='Row Count ' datatype='integer' name='[Calculation_1005147161300398081]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Start' datatype='datetime' name='[start]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1005147161300398081]' derivation='Sum' name='[sum:Calculation_1005147161300398081:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start]' derivation='Month-Trunc' name='[tmn:start:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[start]' derivation='Month-Trunc' name='[tmn:start:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[tmn:start:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tmn:start:ok]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[tmn:start:ok]' member='#2021-11-01 00:00:00#' />
+                <groupfilter function='member' level='[tmn:start:ok]' member='#2021-12-01 00:00:00#' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[tmn:start:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[tmn:start:qk]' value='*MMM-YY' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]</rows>
+        <cols>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[tmn:start:qk]</cols>
+      </table>
+      <simple-id uuid='{DFD9DE06-866C-4AD5-9F8A-DCB0F9962987}' />
+    </worksheet>
+    <worksheet name='Inpateint ALOS'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column caption='LOS' datatype='integer' name='[Calculation_1005147161343315970]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;,[start],[stop])' />
+            </column>
+            <column-instance column='[Calculation_1005147161343315970]' derivation='Avg' name='[avg:Calculation_1005147161343315970:qk]' pivot='key' type='quantitative' />
+            <column caption='Encounterclass' datatype='string' name='[encounterclass]' role='dimension' type='nominal' />
+            <column-instance column='[encounterclass]' derivation='None' name='[none:encounterclass:nk]' pivot='key' type='nominal' />
+            <column caption='Start' datatype='datetime' name='[start]' role='dimension' type='ordinal' />
+            <column caption='Stop' datatype='datetime' name='[stop]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:encounterclass:nk]'>
+            <groupfilter function='member' level='[none:encounterclass:nk]' member='&quot;inpatient&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:encounterclass:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[avg:Calculation_1005147161343315970:qk]' value='n#,##0.0;-#,##0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[avg:Calculation_1005147161343315970:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>Inpatient ALOS: </run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='18'><![CDATA[<[federated.0rl0wxw17z804w19klqrn0uxxvdf].[avg:Calculation_1005147161343315970:qk]> days]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D2472447-A64B-4F7D-9CA4-DF110D5A608B}' />
+    </worksheet>
+    <worksheet name='No of Encounter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column caption='Row Count ' datatype='integer' name='[Calculation_1005147161300398081]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Calculation_1005147161300398081]' derivation='Sum' name='[sum:Calculation_1005147161300398081:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='18'>Number of Encounters: </run>
+                <run bold='true' fontalignment='0' fontsize='18'><![CDATA[<[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9C8CBA14-6387-42D8-BB37-E601DDCB4A3E}' />
+    </worksheet>
+    <worksheet name='Number of Patients'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column-instance column='[patient_id]' derivation='CountD' name='[ctd:patient_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[ctd:patient_id:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='18'>Number of Unique Patients: </run>
+                <run bold='true' fontalignment='0' fontsize='18'><![CDATA[<[federated.0rl0wxw17z804w19klqrn0uxxvdf].[ctd:patient_id:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{846885B3-3ACE-4A2D-8171-FECD30B442B3}' />
+    </worksheet>
+    <worksheet name='Patient Age Histogram'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Patient Age Histogram</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[LOS (copy)_1005147161353756676]' peg='0' size='5' />
+            </column>
+            <column caption='Row Count ' datatype='integer' name='[Calculation_1005147161300398081]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Age' datatype='integer' name='[LOS (copy)_1005147161353756676]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;year&apos;,[birthdate],#12-31-2022#)' />
+            </column>
+            <column caption='Birthdate' datatype='date' name='[birthdate]' role='dimension' type='ordinal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1005147161300398081]' derivation='Sum' name='[sum:Calculation_1005147161300398081:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' field-type='quantitative' max='1971' min='9' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:Age (bin):ok]' value='0' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]</rows>
+        <cols>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:Age (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{DF3AFBBF-D671-404F-A089-103BB969567E}' />
+    </worksheet>
+    <worksheet name='Top 10 Encounter By Reason'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Medium'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DW Tableau Intro Tutorial' name='federated.0rl0wxw17z804w19klqrn0uxxvdf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0rl0wxw17z804w19klqrn0uxxvdf'>
+            <column caption='Row Count ' datatype='integer' name='[Calculation_1005147161300398081]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Enc Reason' datatype='string' name='[enc_reason]' role='dimension' type='nominal' />
+            <column-instance column='[enc_reason]' derivation='None' name='[none:enc_reason:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1005147161300398081]' derivation='Sum' name='[sum:Calculation_1005147161300398081:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:enc_reason:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_1005147161300398081])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:enc_reason:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:enc_reason:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:enc_reason:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-style' value='normal' />
+            <format attr='text-decoration' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#f5f5f5' />
+            <format attr='width' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:enc_reason:nk]' value='172' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-decoration' value='none' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' palette='blue_10_0' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='9' />
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='tooltip'>
+            <format attr='font-style' value='normal' />
+            <format attr='text-decoration' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' />
+              <text column='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[none:enc_reason:nk]</rows>
+        <cols>[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]</cols>
+      </table>
+      <simple-id uuid='{94FF81CC-BC55-43CB-A532-4C692DE56E12}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='54529' id='10' param='horz' type-v2='layout-flow' w='98614' x='693' y='44022'>
+            <zone h='54529' id='5' type-v2='layout-basic' w='98614' x='693' y='44022'>
+              <zone h='40974' id='3' name='Encounter By Payers' w='49304' x='693' y='57577'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='40974' id='8' name='Top 10 Encounter By Reason' w='49310' x='49997' y='57577'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='13555' id='12' name='No of Encounter' show-title='false' w='23448' x='693' y='44022'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='13555' id='13' name='Number of Patients' show-title='false' w='24251' x='24141' y='44022'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='13555' id='14' name='Inpateint ALOS' show-title='false' w='23887' x='48392' y='44022'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='13555' id='15' name='ER Median Time' show-title='false' w='27028' x='72279' y='44022'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='42573' id='16' name='Encouters Over Time' w='49307' x='693' y='1449'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='42573' id='17' name='Patient Age Histogram' w='49307' x='50000' y='1449'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1600' minheight='1600' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='23' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97102' id='22' param='vert' type-v2='layout-flow' w='98614' x='693' y='1449'>
+                <zone fixed-size='280' h='42573' id='16' is-fixed='true' name='Encouters Over Time' w='49307' x='693' y='1449'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42573' id='17' is-fixed='true' name='Patient Age Histogram' w='49307' x='50000' y='1449'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='101' h='13555' id='12' is-fixed='true' name='No of Encounter' show-title='false' w='23448' x='693' y='44022'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='101' h='13555' id='13' is-fixed='true' name='Number of Patients' show-title='false' w='24251' x='24141' y='44022'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='101' h='13555' id='14' is-fixed='true' name='Inpateint ALOS' show-title='false' w='23887' x='48392' y='44022'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='101' h='13555' id='15' is-fixed='true' name='ER Median Time' show-title='false' w='27028' x='72279' y='44022'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40974' id='3' is-fixed='true' name='Encounter By Payers' w='49304' x='693' y='57577'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40974' id='8' is-fixed='true' name='Top 10 Encounter By Reason' w='49310' x='49997' y='57577'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F29D3D39-DE1C-434F-9733-B3EFD841D275}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Patient Age Histogram'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{54299F78-F449-4300-B2E7-8F3BA2977A87}' />
+    </window>
+    <window class='worksheet' name='Encounter By Payers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3857DF70-6593-4B52-8E46-D617BCAD4ACC}' />
+    </window>
+    <window class='worksheet' name='Top 10 Encounter By Reason'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B202CB47-8858-43B1-BCB7-747AF7F2166F}' />
+    </window>
+    <window class='worksheet' name='No of Encounter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DC53983D-E201-4AAA-BE95-C067E462BFAA}' />
+    </window>
+    <window class='worksheet' name='Number of Patients'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C3DAA62D-EB49-47E7-96B9-922E0236D295}' />
+    </window>
+    <window class='worksheet' name='Inpateint ALOS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{36F4EB24-CDF2-46DA-B048-5BD3B7A95456}' />
+    </window>
+    <window class='worksheet' name='ER Median Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{485F8288-BDAF-4565-BDD0-3962635CBF66}' />
+    </window>
+    <window class='worksheet' name='Encouters Over Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0rl0wxw17z804w19klqrn0uxxvdf].[sum:Calculation_1005147161300398081:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{382A76F1-8E11-4ADD-920C-74F13D19F771}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='ER Median Time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Encounter By Payers' />
+        <viewpoint name='Encouters Over Time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Inpateint ALOS'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='No of Encounter'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Number of Patients'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Patient Age Histogram'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Encounter By Reason' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{8E94DD71-9FE5-4BAA-B52E-EF944A2B4D00}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='71' name='Inpateint ALOS' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
